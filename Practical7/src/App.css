@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #cc4b4b;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  height: 100%;
+  width: 200px;
+  background-color: #a694d8;
+  padding-top: 60px;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.content {
+  margin: auto;
+  text-align: center;
+  flex-grow: 1;
+}
