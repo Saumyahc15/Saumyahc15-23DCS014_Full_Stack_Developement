@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Calculator</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+
+    input, select {
+      background: #f1f1f1;
+    }
+
+    button {
+      background: #ff6f61;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff3e2e;
+    }
+
+    .result, .error {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .result {
+      background: #c8f7c5;
+      color: #2c662d;
+    }
+
+    .error {
+      background: #f7c5c5;
+      color: #662c2c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Kids Calculator 🎉</h1>
+    <form action="/calculate" method="post">
+      <input type="text" name="num1" placeholder="Enter first number" required>
+      <input type="text" name="num2" placeholder="Enter second number" required>
+      <select name="operation">
+        <option value="add">➕ Add</option>
+        <option value="subtract">➖ Subtract</option>
+        <option value="multiply">✖ Multiply</option>
+        <option value="divide">➗ Divide</option>
+      </select>
+      <button type="submit">✨ Calculate ✨</button>
+    </form>
+  </div>
+</body>
+</html>
